@@ -3,3 +3,7 @@
 3-Programa una funcion que dada un string te devuelva un array de textos separados por cierto caracter.
 mifuncion("hola que tal"," ") devolvera ["hola","que","tal"];
 4-Programa una funcion que devuelva un texto x veces
+5-Programa una funcion que invierta las palabras de una cadena de texto.
+Programa una funcion para contar el numero de veces que se repite una palabra en un texto
+6-Programa una funcion que valide si una palabra dada es palindromo
+7-Programa una funcion que elimine cierto patron de caracteres de un texto dado.
