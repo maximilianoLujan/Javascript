@@ -137,3 +137,62 @@ const factorial = (i = 0)=>{
 //factorial(1);
 //factorial(10);
 //factorial("hola mundo");
+
+
+
+
+
+//Programa una función que determine si un número es primo (aquel que solo es divisible por sí mismo y 1) o no, pe. miFuncion(7) devolverá true.
+const esPrimo = (numero=0)=>{
+    if (!numero) return(console.warn("No ingresaste un numero"))
+    if (typeof(numero)!== "number") return(console.warn("No ingresaste un numero"))
+    if (numero < 0) return(console.warn("Los numeros negativos no pueden ser primos"))
+    let contador = 0;
+    for (i=0;i<=numero;i++){
+         if ((numero % i)===0) contador++
+    }
+    if (contador===2) return(console.info(`El numero ${numero} es un numero primo`))
+    return(console.info(`El numero ${numero} no es un numero primo`))
+}
+//esPrimo("HOLA MUNDO");
+//esPrimo(10);
+//esPrimo(7);
+//esPrimo(0);
+//esPrimo(1);
+//esPrimo(-5);
+//esPrimo(3.2)
+
+
+
+
+
+// Programa una función que determine si un número es par o impar, pe. miFuncion(29) devolverá Impar.
+const esParOImpar = (numero = 0)=>{
+    if (!numero) return(console.warn("No ingresaste un numero"))
+    if (typeof(numero)!== "number") return(console.warn("No ingresaste un numero"))
+    if ((numero % 2)===0) return(console.info(`El numero ${numero} es un numero par`))
+    return(console.info(`El numero ${numero} es un numero impar`))
+    
+}
+//esParOImpar();
+//esParOImpar(2);
+//esParOImpar(29);
+
+
+
+
+
+//Programa una función para convertir grados Celsius a Fahrenheit y viceversa, pe. miFuncion(0,"C") devolverá 32°F.
+const pasarGrados = (numero=0,caracter="")=>{
+    if (!numero) return(console.warn("No ingresaste los grados"))
+    if (!caracter) return(console.warn("No ingresaste la unidad"))
+    if (typeof(numero)!== "number") return(console.warn("Por favor ingresa un numero"))
+    if ((caracter.toLowerCase() !== "f") && (caracter.toLocaleLowerCase() !== "c")) return(console.warn("Por favor ingrese una unidad valida, f o c "))
+    if (caracter.toLowerCase() === "c"){
+        return(console.info(`${numero}° Celsius son ${numero + 32}° Fahrenheit`));
+    }
+    return(console.info(`${numero}° Fahrenheit son ${numero -32 }° Celsius`));
+}
+pasarGrados(3,"r");
+pasarGrados(3,"c");
+pasarGrados(30,"f");
