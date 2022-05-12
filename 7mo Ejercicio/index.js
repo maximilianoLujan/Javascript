@@ -193,6 +193,27 @@ const pasarGrados = (numero=0,caracter="")=>{
     }
     return(console.info(`${numero}° Fahrenheit son ${numero -32 }° Celsius`));
 }
-pasarGrados(3,"r");
-pasarGrados(3,"c");
-pasarGrados(30,"f");
+//pasarGrados(3,"r");
+//pasarGrados(3,"c");
+//pasarGrados(30,"f");
+
+
+
+
+
+//15) Programa una función para convertir números de base binaria a decimal y viceversa, pe. miFuncion(100,2) devolverá 4 base 10.
+const pasarDecimalBinario = (numero=0, base=0)=>{
+    if (!numero) return(console.warn("No ingresaste los grados"))
+    if (!base) return(console.warn("No ingresaste la unidad"))
+    if ((base != 2)&&(base!=10)) return(console.warn("No ingresaste una base valida"))
+    if (base === 2){
+        auxiliar = parseInt(numero.toString(),2)
+        return(console.info(`El numero ${numero} convertido a decimal quedaria ${auxiliar}`))
+    }else{
+        
+    }
+}
+pasarDecimalBinario(1000,54);
+pasarDecimalBinario(1000,2);
+pasarDecimalBinario(101011,2);
+pasarDecimalBinario(54,10);
