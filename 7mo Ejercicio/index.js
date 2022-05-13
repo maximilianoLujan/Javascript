@@ -247,5 +247,40 @@ const cuantosAniosPasaron = (a = new Date())=>{
     if (a.getFullYear() > 2022) return(console.info("Ese dia todavia no ha llegado"))
     return(console.info(`Desde ${a.getFullYear()} hasta 2022 han pasado ${2022 - a.getFullYear()} años`))
 }
-cuantosAniosPasaron(new Date(2023,4,5));
-cuantosAniosPasaron(new Date(1984,4,23));
+//cuantosAniosPasaron(new Date(2023,4,5));
+//cuantosAniosPasaron(new Date(1984,4,23));
+
+
+
+
+
+//18) Programa una función que dada una cadena de texto cuente el número de vocales y consonantes, pe. miFuncion("Hola Mundo") devuelva Vocales: 4, Consonantes: 5.
+const devolverNroConsonantesYVocales = (palabra="")=>{
+    if (!palabra) return(console.warn("No ingresaste una palabra"))
+    let consonantes = 0;
+    let vocales = 0;
+    auxiliar = palabra.toLocaleLowerCase();
+    for (i =0;i < auxiliar.length ;i++){
+        if (auxiliar[i] === " ") continue
+        else if ((auxiliar[i]=="a")||(auxiliar[i]=="e")||(auxiliar[i]=="i")||(auxiliar[i]=="o")||(auxiliar[i]=="u") ) vocales++;
+        else consonantes++;
+    }
+    return(console.info(`La palabra ${palabra} tiene ${vocales} vocales y ${consonantes} consonantes`))
+}
+//devolverNroConsonantesYVocales();
+//devolverNroConsonantesYVocales("HOlA MUNdO");
+//devolverNroConsonantesYVocales("CUANTAS vocales tiene este TEXTO");
+
+
+
+
+
+//Programa una función que valide que un texto sea un nombre válido, pe. miFuncion("Jonathan MirCha") devolverá verdadero.
+/*const validarNombre = (palabra = "")=>{
+    if (!palabra) return(console.warn("No ingresaste nada"))
+        if (palabra === `${(/^[a-z ,.'-]+$/i)}`)
+            return(console.info(`El nombre ${palabra} es valido`))
+        else
+            return(console.info(`El nombre ${palabra} no es valido`))
+}
+validarNombre("MaximilianoLujan");*/
