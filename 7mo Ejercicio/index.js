@@ -208,12 +208,44 @@ const pasarDecimalBinario = (numero=0, base=0)=>{
     if ((base != 2)&&(base!=10)) return(console.warn("No ingresaste una base valida"))
     if (base === 2){
         auxiliar = parseInt(numero.toString(),2)
-        return(console.info(`El numero ${numero} convertido a decimal quedaria ${auxiliar}`))
+        return(console.info(`El numero ${numero} convertido a decimal es: ${auxiliar}`))
     }else{
-        
+        resultado = [];
+        auxiliar = numero;
+        resto = 0;
+        while (auxiliar!==0){
+            resultado.push(auxiliar % 2);
+            auxiliar = Math.floor(auxiliar/2);
+        }
+        return console.info(`El numero ${numero} convertido a binario es: ${resultado.reverse().join("")}`)
     }
 }
-pasarDecimalBinario(1000,54);
-pasarDecimalBinario(1000,2);
-pasarDecimalBinario(101011,2);
-pasarDecimalBinario(54,10);
+//pasarDecimalBinario(1000,54);
+//pasarDecimalBinario(1000,2);
+//pasarDecimalBinario(101011,2);
+//pasarDecimalBinario(54,10);
+//pasarDecimalBinario(422,10);
+
+
+
+
+
+//Programa una función que devuelva el monto final después de aplicar un descuento a una cantidad dada, pe. miFuncion(1000, 20) devolverá 800.
+const aplicarDescuento = (numero=0,descuento=0)=>{
+    return(console.info(`El precio original es de $${numero}, pero con el descuento del 
+    ${descuento}%, el precio final es de $${numero -((numero * descuento)/100)}`))
+}
+//aplicarDescuento(1000,20);
+
+
+
+
+
+//Programa una función que dada una fecha válida determine cuantos años han pasado hasta el día de hoy, pe. miFuncion(new Date(1984,4,23)) devolverá 37 años (en 2022).
+const cuantosAniosPasaron = (a = new Date())=>{
+    if (!a) return(console.warn("No ingresaste los datos"))
+    if (a.getFullYear() > 2022) return(console.info("Ese dia todavia no ha llegado"))
+    return(console.info(`Desde ${a.getFullYear()} hasta 2022 han pasado ${2022 - a.getFullYear()} años`))
+}
+cuantosAniosPasaron(new Date(2023,4,5));
+cuantosAniosPasaron(new Date(1984,4,23));
