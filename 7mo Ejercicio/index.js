@@ -276,11 +276,81 @@ const devolverNroConsonantesYVocales = (palabra="")=>{
 
 
 //Programa una función que valide que un texto sea un nombre válido, pe. miFuncion("Jonathan MirCha") devolverá verdadero.
-/*const validarNombre = (palabra = "")=>{
-    if (!palabra) return(console.warn("No ingresaste nada"))
-        if (palabra === `${(/^[a-z ,.'-]+$/i)}`)
-            return(console.info(`El nombre ${palabra} es valido`))
+const validarNombre = (nombre = "")=>{
+    if (!nombre) return(console.warn("No ingresaste un nombre"));
+    if (typeof(nombre) !== "string") return(console.warn("No ingresaste un texto"));
+    let nombreregex = /^[a-z ,.'-]+$/i;
+    if (!nombre) return(console.warn("No ingresaste nada"))
+        if (nombreregex.test(nombre))
+            return(console.info(`El nombre ${nombre} es valido`))
         else
-            return(console.info(`El nombre ${palabra} no es valido`))
+            return(console.infoE(`l nombre ${nombre} no es valido`))
 }
-validarNombre("MaximilianoLujan");*/
+//validarNombre("Maximiliano Lujan*");
+//validarNombre("Jonathan MirCha");
+//validarNombre("Mateo 54321");
+
+
+
+
+
+
+//20) Programa una función que valide que un texto sea un email válido, pe. miFuncion("jonmircha@gmail.com") devolverá verdadero.
+const validarEmail = (mail ="")=>{
+    if (!mail) return(console.warn("No ingresaste un email"))
+    if (typeof(mail) !== "string") return(console.warn("No ingresaste un texto"));
+    let expregular =  (/[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})/i).test(mail);
+    return (expregular)
+        ?console.info(`El mail ${mail} es valido`)
+        :console.warn(`El mail ${mail} no es valido`)
+}
+//validarEmail();
+//validarEmail("jonmircha@gmail.com");
+//validarEmail("maxilujan.com");
+//validarEmail("maxilujan@");
+//validarEmail("@gmail.com");
+
+
+
+
+
+//21) Programa una función que dado un array numérico devuelve otro array con los números elevados al cuadrado, pe. mi_funcion([1, 4, 5]) devolverá [1, 16, 25].
+const elevarArreglo = (array =[]) => {
+    if (!array) return(console.warn("El arreglo esta vacio"));
+    let auxiliar = [];
+    array.forEach(x =>{
+        if (typeof(x) !== "number"){
+            auxiliar.push(-1);
+            
+        } else{
+            x = x*x;
+            auxiliar.push(x);
+        } 
+    })
+    return(console.info(`El arreglo quedaria: ${auxiliar}`));
+}
+
+//console.info("Donde aparece un -1 es porque en esa posicion del arreglo no habia un numero")
+//elevarArreglo([1,4,5]);
+//elevarArreglo([1,4,5,"maxi",2.2]);
+
+
+
+
+
+//22) Programa una función que dado un array devuelva el número mas alto y el más bajo de dicho array, pe. miFuncion([1, 4, 5, 99, -60]) devolverá [99, -60].
+const menorMayorDelArreglo = (array =[])=>{
+    if (!array) return(console.warn("El arreglo esta vacio"));
+    var check = false;
+    array.forEach(x=>{
+        if (typeof(x)!== "number"){
+            check = true;
+            return(console.warn("Solo puedes ingresar numeros en el arreglo"));
+        }
+    })
+    var m = Math.min(...array);
+    var M = Math.max(...array);
+    if (!check) return(console.info(`El menor valor del arreglo es: ${m} y el mayor es: ${M}`))
+}
+menorMayorDelArreglo([1,4,5,99,-60]);
+menorMayorDelArreglo([0,2,"hola"]);
