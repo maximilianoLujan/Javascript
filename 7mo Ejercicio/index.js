@@ -352,5 +352,51 @@ const menorMayorDelArreglo = (array =[])=>{
     var M = Math.max(...array);
     if (!check) return(console.info(`El menor valor del arreglo es: ${m} y el mayor es: ${M}`))
 }
-menorMayorDelArreglo([1,4,5,99,-60]);
-menorMayorDelArreglo([0,2,"hola"]);
+//menorMayorDelArreglo([1,4,5,99,-60]);
+//menorMayorDelArreglo([0,2,"hola"]);
+
+
+
+
+
+
+//Programa una función que dado un array de números devuelva un objeto con 2 arreglos en el primero almacena los números pares y en el segundo los impares, pe. miFuncion([1,2,3,4,5,6,7,8,9,0]) devolverá {pares: [2,4,6,8,0], impares: [1,3,5,7,9]}.
+const paresEimpares = (array =[] )=>{
+    if (!array) return(console.warn("El arreglo esta vacio"));
+    var objeto = {
+        pares: [],
+        impares: []
+    }
+    array.forEach(x=>{
+        if ((x % 2)===0) 
+            objeto.pares.push(x);
+        else 
+            objeto.impares.push(x);
+    })
+    return(console.info(`Pares: ${objeto.pares} Impares: ${objeto.impares}`))
+}
+//paresEimpares([1,2,3,4,5,6,7,8,9,0]);
+//paresEimpares([4,32,543,65,43,53243,2])
+
+
+
+
+
+
+//24) Programa una función que dado un arreglo de números devuelva un objeto con dos arreglos, el primero tendrá los numeros ordenados en forma ascendente y el segundo de forma descendiente, pe. miFuncion([7, 5,7,8,6]) devolverá { asc: [5,6,7,7,8], desc: [8,7,7,6,5] }.
+const ordenarAscDesc = (array="")=>{
+    if (!array) return(console.warn("El arreglo esta vacio"));  
+    const objeto = {
+        ascendente: new Array(),
+        descendente: new Array() 
+    }
+    var aux = array.sort((a,b)=> {
+        return (a-b);
+    })
+    console.info(aux)
+    objeto.ascendente = aux;
+    objeto.descendente = aux.reverse();
+    console.info(objeto.ascendente)
+    return(console.info(`Asc: ${objeto.ascendente} y Desc: ${objeto.descendente}`));
+}
+ordenarAscDesc([7,5,7,8,6]);
