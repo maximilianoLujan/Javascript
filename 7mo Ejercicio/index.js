@@ -393,10 +393,52 @@ const ordenarAscDesc = (array="")=>{
     var aux = array.sort((a,b)=> {
         return (a-b);
     })
-    console.info(aux)
     objeto.ascendente = aux;
-    objeto.descendente = aux.reverse();
-    console.info(objeto.ascendente)
+    objeto.descendente = aux.slice().reverse();
     return(console.info(`Asc: ${objeto.ascendente} y Desc: ${objeto.descendente}`));
 }
-ordenarAscDesc([7,5,7,8,6]);
+//ordenarAscDesc([7,5,7,8,6]);
+//ordenarAscDesc([2,43,5,7,89,256]);
+
+
+
+
+
+
+// Programa una función que dado un arreglo de elementos, elimine los duplicados, pe. miFuncion(["x", 10, "x", 2, "10", 10, true, true]) devolverá ["x", 10, 2, "10", true].
+const eliminarDuplicados = (array =[])=>{
+    if (!array) return(console.warn("El arreglo esta vacio"));
+    let arrayaux =[];
+    array.forEach(x => {
+        if (arrayaux.includes(x) !== true) arrayaux.push(x);
+
+    }) 
+    return(console.info(`El arreglo sin repetidos es: ${arrayaux}`));
+}
+//eliminarDuplicados(["x", 10, "x", 2, "10", 10, true, true]);
+//eliminarDuplicados([3,3,3,3,"hola mundo","hola mundo","3"]);
+
+
+
+
+
+
+//26) Programa una función que dado un arreglo de números obtenga el promedio, pe. promedio([9,8,7,6,5,4,3,2,1,0]) devolverá 4.5.
+const promedioDeUnArray= (array=[])=>{
+    if (!array) return(console.warn("El arreglo esta vacio"));
+    suma=0;
+    contador=0;
+    array.forEach(x=>{
+        if (typeof(x) !== "number") {
+            return(console.warn(`Hay un elemento del arreglo que no es un numero`))
+        }       
+    })
+    array.forEach(x=>{
+        suma +=x;
+        contador++;
+    })
+    return(console.info(`El promedio es de: ${suma/contador}`))
+
+}
+//promedioDeUnArray([9,8,7,6,5,4,3,2,1,0]);
+//promedioDeUnArray([9,"hola mundo",7,6,5,4,3,2,1,0])
