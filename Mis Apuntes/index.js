@@ -103,8 +103,8 @@ objeto1 = null;
 const iterable = [3,6,4,12];
 const iterador = iterable[Symbol.iterator]();
 
-console.log(iterable);
-console.log(iterador);
+//console.log(iterable);
+//console.log(iterador);
 //console.log(iterador.next());
 //console.log(iterador.next());
 //console.log(iterador.next());
@@ -112,8 +112,58 @@ console.log(iterador);
 
 let next = iterador.next();
 while(!next.done){
-    console.log(next.value)
+    //console.log(next.value)
     next = iterador.next();
 }
 
 
+
+
+//A partir de aca seran los apuntes sobre el DOM (Modificando el Document)
+document.write("<h2>Este h2 esta escrito desde javascript</h2>");
+/*Elementos del Dom*/
+//document.getElementById()
+//document.querySelector() un selector cualquiera
+//document.querySelectorAll()
+
+/*Obtener y modificar atributos*/
+//document.documentElement.lang; 
+//document.documentElement.getAttribute("lang"); Forma correcta
+//document.documentElement.lang = "es";
+//document.documentElement.setAttribute("lang","es");
+//document.documentElement.hasAttribute("lang");
+//document.documentElement.removeAttribute("lang");
+
+/*Estilos*/
+//document.documentElement.style.backgroundColor;
+//document.documentElement.getAttribute("style");
+//
+const miTexto = document.querySelector("h1")
+//console.log(window.getComputedStyle(miTexto));
+//console.log(miTexto.setAttribute("color","aqua"))
+//miTexto.style.setProperty("color","red");
+//miTexto.style.setProperty("background-color","blue");
+//miTexto.style.backgroundColor = "blue";
+
+/*variables css o Custom Properties*/
+
+/* Clases CSS */
+//console.log(miTexto)
+//console.log(miTexto.className);
+//console.log(miTexto.classList);
+//miTexto.classList.add();
+//miTexto.classList.contains()
+//miTexto.classList.remove()
+//miTexto.classList.toggle(); ---> Si existe la clase la borra y si no existe la agrega
+//
+//miTexto.classList.replace("","") --->Remplaza la clase por otra
+
+/* Texto y HTML */
+//const $miidDOM = document.getElementById("parr");
+//console.log($miidDOM);
+//$miidDOM.innerHTML = "<br><p>Este es otro texto<p/>"
+//$miidDOM.textContent = "<br>Esto es test content";
+//$miidDOM.outerHTML = "<br><p>Este es otro texto<p/><br>"
+
+
+/* DOM Traversing (Recorriendo el DOM) */
