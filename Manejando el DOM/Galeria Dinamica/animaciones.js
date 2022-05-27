@@ -10,13 +10,13 @@ $img.setAttribute("alt","tecnologia");
 $encabezado.innerText = "Tecnologia";
 $div.className += "contenedorimagenes--c";
 
-console.log($div);
-console.log($encabezado);
-console.log($img);
+//console.log($div);
+//console.log($encabezado);
+//console.log($img);
 
 $div.appendChild($img);
 $div.appendChild($encabezado);
-console.log($div);
+//console.log($div);
 
 $container.appendChild($div);
 
@@ -32,26 +32,66 @@ $container.appendChild($div2);
 //Probando a recorrer todos los nombres de las clases de una etiqueta HTML
 let contador = 1;
 ($container.classList).forEach(el =>{
-    console.info(`La clase numero ${contador} es: ${el}`);
+    //console.info(`La clase numero ${contador} es: ${el}`);
     contador++;
 });
 
-/*La forma adecuada de agregar elementos dinamicamente es mediante document.CreateDocumentFragment() Es mas optima ya que no le pide tantos recursos al navegador del usuario*/
+//Realizando el agregado dinamico pero con template
+const arr = [
+    {
+        img: "Imagenes/perros.jpg",
+        src: "perros"
+    },
+    {
+        img: "Imagenes/auto.jpg",
+        src: "Auto"
+    }
+]
+const $mitemplate = document.getElementById("template--c"),
+    $mifragmento2 = document.createDocumentFragment(),
+    $miimagen = $mitemplate.getElementsByTagName("img");
 
+console.log($miimagen);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*La forma adecuada de agregar elementos dinamicamente es mediante document.CreateDocumentFragment() Es mas optima ya que no le pide tantos recursos al navegador del usuario*/
 const deportes = ["Futbol","Escritorio","Gimnasio","Libros","Paisaje","Salud","Tecnologia","Voley"];
 
 const $miul = document.createElement("ul");
 const $mifragmento = document.createDocumentFragment();
 
-console.log($miul);
-console.log($mifragmento);
+//console.log($miul);
+//console.log($mifragmento);
 
 deportes.forEach(el =>{
     const $mili = document.createElement("li");
     $mili.innerText += el;
     $mifragmento.appendChild($mili)
 })
-console.log($mifragmento);
+//console.log($mifragmento);
 const $apartados = document.createElement("h2");
 $apartados.innerHTML += "Todos Los Apartados";
 document.body.appendChild($apartados);
