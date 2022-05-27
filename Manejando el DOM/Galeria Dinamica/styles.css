@@ -1,0 +1,28 @@
+body{
+    margin: 0;
+}
+.mih1{
+    text-align: center;
+}
+.contenedorimagenes{
+    margin: 0.5rem;
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-wrap: wrap;
+}
+.contenedorimagenes--c{
+    margin: 0.2rem;
+    height: 330px;
+    width: 300px;
+    background-color: rgb(38, 38, 143);
+}
+img{
+    width: 300px;
+    height: 300px;
+}
+h4{
+    margin: 5px;
+    text-align: center;
+    color: #ffffff;
+}

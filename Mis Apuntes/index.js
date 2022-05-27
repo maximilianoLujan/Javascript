@@ -167,3 +167,6 @@ const miTexto = document.querySelector("h1")
 
 
 /* DOM Traversing (Recorriendo el DOM) */
+//createElement() ------> Crea un elemento HTML
+//createTextNode()------> Crea un nodo de texto
+//appendsChild()  ------> Agrega un hijo a la etiqueta
