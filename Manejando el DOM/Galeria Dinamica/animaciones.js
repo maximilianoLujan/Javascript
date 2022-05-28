@@ -36,43 +36,35 @@ let contador = 1;
     contador++;
 });
 
+
+
+
 //Realizando el agregado dinamico pero con template
+const   $micontenedor = document.querySelector(".contenedorimagenes") 
+    $mitemplate = document.getElementById("template--c").content,
+    $mifragmento2 = document.createDocumentFragment()
+
 const arr = [
     {
         img: "Imagenes/perros.jpg",
-        src: "perros"
+        tittle: "perros"
     },
     {
         img: "Imagenes/auto.jpg",
-        src: "Auto"
+        tittle: "Auto"
     }
 ]
-const $mitemplate = document.getElementById("template--c"),
-    $mifragmento2 = document.createDocumentFragment(),
-    $miimagen = $mitemplate.getElementsByTagName("img");
-
-console.log($miimagen);
 
 
+arr.forEach(el => {
+    $mitemplate.querySelector("img").setAttribute("src",el.img);
+    $mitemplate.querySelector("img").setAttribute("alt",el.tittle);
+    $mitemplate.querySelector("h4").textContent = el.tittle;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    let $clone = document.importNode($mitemplate,true);
+    $mifragmento2.appendChild($clone);
+})
+$micontenedor.appendChild($mifragmento2);
 
 
 
