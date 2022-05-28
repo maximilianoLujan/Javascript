@@ -1,4 +1,5 @@
-//Agregando imagen dinamicamente creando cada elemento y agregandole los atributos
+/*
+Agregando imagen dinamicamente creando cada elemento y agregandole los atributos
 const $container = document.querySelector("div");
 console.log($container);
 
@@ -89,3 +90,34 @@ $apartados.innerHTML += "Todos Los Apartados";
 document.body.appendChild($apartados);
 $miul.appendChild($mifragmento)
 document.body.appendChild($miul);
+
+
+//Agregando elementos con los nuevos metodos de javascript
+
+const $mycontent = document.querySelector("div"),
+    $mydiv = document.createElement("div"),
+    $myimage = document.createElement("img"),
+    $mytext = document.createElement("h4");
+
+
+$myimage.setAttribute("src","Imagenes/auto.jpg");
+$myimage.setAttribute("alt","auto");
+$mytext.insertAdjacentText("afterbegin","Auto");
+$mydiv.className += "contenedorimagenes--c";
+$mydiv.append($myimage);
+$mydiv.append($mytext);
+
+let $clone = $mydiv.cloneNode(true);
+
+
+
+
+$mycontent.prepend($clone);
+$mycontent.append($mydiv);
+
+/*
+    prepend
+    append
+    before 
+    after
+*/
