@@ -1,0 +1,55 @@
+.contenedor1{
+    width: 100%;
+    height: 12rem;
+    background-color: #6eff6e;
+    display: flex;
+}
+.contenedor2{
+    width: 100%;
+    height: 12rem;
+    background-color: #691c0b;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.contenedor3{
+    width: 100%;
+    height: 20rem;
+    background-color: #482edf;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.botones{
+  margin: auto;
+  height: 4rem;
+}
+.enlaces{
+    text-decoration: none;
+    display: auto;
+    color: #ffecec;
+}
+.imagenes1,.imagenes2{
+    height: 100%;
+}
+.div1{
+    width: 100%;
+    height: 20rem;
+    display: flex;
+    margin: auto;
+    background-color: red;
+}
+.div2{
+    width: 80%;
+    height: 15rem;
+    display: flex;
+    background-color: #691c0b;
+    margin: auto;
+}
+.div3{
+    width: 60%;
+    height: 10rem;
+    display: flex;
+    background-color: #6eff6e;
+    margin: auto;
+}

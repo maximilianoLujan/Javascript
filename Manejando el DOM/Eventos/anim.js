@@ -36,17 +36,6 @@ function eliminandoEvento(){
 
 
 $botonaeliminar.addEventListener("dblclick",eliminandoEvento);
-
-
-
-
-
-
-
-
-
-
-
 //Manejando el flujo de eventos
 const $miscontenedores = document.querySelectorAll(".miseccion div");
 console.log($miscontenedores);
