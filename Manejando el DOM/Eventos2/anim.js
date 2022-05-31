@@ -1,6 +1,6 @@
 document.addEventListener("click",(e)=>{
     if (e.target.className === "botones"){
-        alert(`Esta apretando un boton`)
+        window.open("https://www.youtube.com/")
     }
     if (e.target.className === "contenedor1"){
         alert(`Esta apretando el primer contenedor`)
@@ -30,8 +30,6 @@ $midiv3.addEventListener("dblclick",(e)=>{
 
 
 //Agregando un prevemntdefault a un enlace
-
-
 const $miboton = document.querySelector("enlaces");
 $miboton.addEventListener("click",(e)=>{
     e.preventDefault;
