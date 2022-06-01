@@ -8,7 +8,7 @@ document.addEventListener("click",e=>{
             $elmenu.style.animationName = "mianimacion2"
             setTimeout(() => {
                 $elmenu.style.display = "none";
-            }, 2000);
+            }, 1000);
             $elboton.style.backgroundImage = "url(Icons/menus.png)";
             comprobar=false;
         }else{
