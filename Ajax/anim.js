@@ -35,6 +35,7 @@
     json.send();
 })();
 
+
 (()=>{   
     const d = document,
     $milista = d.querySelector(".milistafetch"),
@@ -76,4 +77,40 @@
         }
     }
     obtenerdatos();
+})()
+
+(()=>{
+    const d = document,
+        $milista = d.querySelector(".milistaaxios"),
+        $mifragmento = d.createDocumentFragment();
+
+    async function obtenerDatos(){
+        try {
+            let res = await axios.get("https://jsonplaceholder.typicode.com/users"),
+                json = await res.data;
+                json.forEach(el=>{
+                    const $linumber = d.createElement("li"),
+                    $liname = d.createElement("li"),
+                    $liuser = d.createElement("li"),
+                    $ul = d.createElement("ul"); 
+                    $linumber.textContent = `Comentario numero: ${el.id}`;
+                    $liname.textContent = `Realizado por: ${el.name}`;
+                    $liuser.textContent = `Username: ${el.username}`;
+                    $ul.appendChild($linumber);
+                    $ul.appendChild($liname);
+                    $ul.appendChild($liuser);
+                    $mifragmento.appendChild($ul);
+                })
+                $milista.appendChild($mifragmento)
+        } catch (error) {
+            const $mih2 = d.createElement("h2");
+            $mih2.textContent = `Ha ocurrido el error: ${error.message}`;
+            $mih2.style.textAlign = "center";
+            $milista.appendChild($mih2)
+            console.log(error);
+        } finally{
+            console.log("Esto se ejecutara siempre")
+        }
+    }
+    obtenerDatos();
 })()
