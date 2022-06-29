@@ -1,0 +1,51 @@
+{
+  "Jugadores": [
+    {
+      "id": 1,
+      "nombre": "Mariano Andujar",
+      "edad": 38,
+      "posicion": "Arquero"
+    },
+    {
+      "id": 2,
+      "nombre": "Agustin Rogel",
+      "edad": 24,
+      "posicion": "Defensor"
+    },
+    {
+      "id": 3,
+      "nombre": "Fernando Zuqui",
+      "edad": 30,
+      "posicion": "Mediocampista"
+    },
+    {
+      "id": 4,
+      "nombre": "Mauro Boselli",
+      "edad": 37,
+      "posicion": "Delantero"
+    },
+    {
+      "nombre": "loco diaz",
+      "edad": 27,
+      "posicion": "delantero",
+      "id": 5
+    }
+  ],
+  "Productos": [
+    {
+      "id": 1,
+      "nombre": "pava",
+      "precio": 2000
+    },
+    {
+      "id": 2,
+      "nombre": "botines",
+      "precio": 7000
+    },
+    {
+      "id": 3,
+      "nombre": "campera",
+      "precio": 14000
+    }
+  ]
+}
